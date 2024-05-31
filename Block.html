@@ -1,4 +1,11 @@
-<script src="https://xxsibxx.github.io/ruffleembedsetup112/ruffle/ruffle.js"></script>
-<div class="swf"dir="ltr" style="text-align: left;" trbidi="on">
-        <embed height="480" pluginspage=" http://www.macromedia.com/go/getflashplayer" src="https://realonepc.github.io/Block2.0/TheOnline.swf" type="application/x-shockwave-flash" width="620"></embed>
-</div>
+<script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.addEventListener("load", (event) => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        const container = document.getElementById("container");
+        container.appendChild(player);
+        player.load("https://realonepc.github.io/Block2.0/TheOnline.swf");
+    });
+</script>
+<script src="https://realonepc.github.io/Block2.0/ruffle.js"></script>
